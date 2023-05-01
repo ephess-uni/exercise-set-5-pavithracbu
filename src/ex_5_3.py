@@ -18,8 +18,8 @@ if __name__ == "__main__":
     # To test your program with arguments, run it from the command line
     # (see README.md for more details)
     parser = argparse.ArgumentParser(description='Module for making mean 0 and std')
-    parser.add_argument('-infile', help='enter input file name')
-    parser.add_argument('-outfile', help='enter output file name')
+    parser.add_argument('infile', help='enter input file name')
+    parser.add_argument('outfile', help='enter output file name')
     args = parser.parse_args()
     data = np.loadtxt(args.infile)
 
