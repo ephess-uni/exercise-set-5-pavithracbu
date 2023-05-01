@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
 
     # Complete the data processing steps using numpy here.
-    data = np.loadtxt(INFILE)
+    data = np.loadtxt(INFILE, delimiter=",")
 
     mean = np.mean(data, axis=0)
     std = np.std(data, axis=0)
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     processed = zero_mean / std
 
     # Save the output to OUTFILE using numpy routines.
-    np.savetxt(OUTFILE, processed, fmt='%.2e')
+    np.savetxt(OUTFILE, processed, delimiter=",")
