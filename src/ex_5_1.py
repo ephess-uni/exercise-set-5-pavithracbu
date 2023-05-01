@@ -10,9 +10,9 @@ except ImportError:
 
 def main(infile):
     """Call line_count with the infile argument."""
-
-    count = line_count(infile)
-    print(f"The file '{infile}' has {count} lines")
+    line_count(infile)
+    #count = line_count(infile)
+    #print(f"The file '{infile}' has {count} lines")
 
 
 if __name__ == "__main__":
