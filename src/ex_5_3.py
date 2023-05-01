@@ -23,9 +23,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     data = np.loadtxt(args.infile)
 
-    data -= np.mean(data)
-    data /= np.std(data)
-    processed = data
+    mean = np.mean(data, axis=0)
+    std = np.std(data, axis=0)
+    zero_mean = data - mean
+    processed = zero_mean / std
 
     np.savetxt(args.outfile, processed, delimiter=",")
 
